@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "name":"Pratik",
+        "age":"21",
+        "pass":"a7sdf7gsd",
+        "email":"pratik@gmail.com"
+    },
+    {
+        "id":2,
+        "name":"Rohit",
+        "age":"23",
+        "pass":"a7sf7gsd",
+        "email":"rohit@gmail.com"
+    },
+    {
+        "id":3,
+        "name":"Rahul",
+        "age":"22",
+        "pass":"a7sdf7g",
+        "email":"rahul@gmail.com"
+    }
+]
