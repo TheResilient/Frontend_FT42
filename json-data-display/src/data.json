@@ -1,23 +1,24 @@
-[
+{
+  "name":"KEY",
+  "type":"TEXT",
+  "details":"aasdfdfdfdfasdfasdfasdfasdf",
+  "attributes":
+  [
     {
-        "id":1,
-        "name":"Pratik",
-        "age":"21",
-        "pass":"a7sdf7gsd",
-        "email":"pratik@gmail.com"
+      "key":"IP",
+      "value":"192.198.80.147"
     },
     {
-        "id":2,
-        "name":"Rohit",
-        "age":"23",
-        "pass":"a7sf7gsd",
-        "email":"rohit@gmail.com"
+      "key":"Location",
+      "value":"18978787"
     },
     {
-        "id":3,
-        "name":"Rahul",
-        "age":"22",
-        "pass":"a7sdf7g",
-        "email":"rahul@gmail.com"
+      "key":"Time",
+      "value":"Thu Dec 08 2022 14:37:55 GMT+0530"
+    },
+    {
+      "key":"Rank",
+      "value":"Major"
     }
-]
+  ]
+}
