@@ -1,24 +1,25 @@
-{
-  "name":"KEY",
-  "type":"TEXT",
-  "details":"aasdfdfdfdfasdfasdfasdfasdf",
-  "attributes":
-  [
-    {
-      "key":"IP",
-      "value":"192.198.80.147"
-    },
-    {
-      "key":"Location",
-      "value":"18978787"
-    },
-    {
-      "key":"Time",
-      "value":"Thu Dec 08 2022 14:37:55 GMT+0530"
-    },
-    {
-      "key":"Rank",
-      "value":"Major"
-    }
-  ]
-}
+[
+  {
+    "name": "KEY",
+    "type": "TEXT",
+    "details": "aasdfdfdfdfasdfasdfasdfasdf",
+    "attributes": [
+      {
+        "key": "IP",
+        "value": "192.198.80.147"
+      },
+      {
+        "key": "Location",
+        "value": "18978787"
+      },
+      {
+        "key": "Time",
+        "value": "Thu Dec 08 2022 14:37:55 GMT+0530"
+      },
+      {
+        "key": "Rank",
+        "value": "Major"
+      }
+    ]
+  }
+]

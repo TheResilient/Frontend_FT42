@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
 import data from "./data.json";
-import PostList from "./list";
 import React, { useState } from "react";
 
 function App() {
@@ -12,22 +11,52 @@ function App() {
       <div className="posts">
         <div className="head1">
           <h3>Asset Details</h3>
-          Key<br></br>
-          Text
-          <br />
-          <input type="text" id="fname" name="fname"></input>
-          <br></br>
-          <br></br>
-          Attributes<br></br>
-          <br></br>
+          {data.map((item, i) =>
+            {return (
+              <div key={i}>
+                {item.name}
+                <br></br>
+                <b>{item.type}</b>
+                <br></br>
+                <b>Details: {item.details}</b>
+                <br></br>
+                Attributes:<br></br>
+                <table>
+                  <thead>
+                    <th>
+                      Key
+                    </th>
+                    <th>
+                      Value
+                    </th>
+                  </thead>
+                  {item.attributes.map((sub) => (
+                    <tr>
+                    <td>
+                      <tr>
+                      {sub.key}
+                      </tr>
+                    </td>
+                    <td>
+                      <tr>
+                      {sub.value}
+                      </tr>
+                    </td>
+                    </tr>
+                    
+                  ))}
+                </table>
+              </div>
+            );
+          })}
         </div>
-        <div>
+
+
+        {/* <div>
           <select defaultValue={selects} value={selects} onChange={(e) => setSelects(e.target.value)}>
-            {/* <option selected disabled="true">
-              --select--
-            </option> */}
+            
             {data.map((result) => (
-              <option value={result.id}>{result.id}</option>
+              <option value={result.name}>{result.name}</option>
             ))}
           </select>
         </div>
@@ -40,7 +69,7 @@ function App() {
               <th>Value</th>
           </thead>
           {data
-            .filter((data) => data.id == selects)
+            .filter((data) => data.name == selects)
             .map((data) => {
               return (
                 <tr>
@@ -57,7 +86,7 @@ function App() {
                 </tr>
               );
             })}
-        </table>
+        </table> */}
       </div>
     </div>
   );
