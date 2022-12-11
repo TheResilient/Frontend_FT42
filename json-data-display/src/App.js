@@ -2,10 +2,20 @@ import logo from "./logo.svg";
 import "./App.css";
 import data from "./data.json";
 import React, { useState } from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import FormControl, { useFormControl } from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Box from "@mui/material/Box";
 
 function App() {
-  var [selects, setSelects] = useState();
-  console.log(selects);
+  // var [selects, setSelects] = useState();
+  // console.log(selects);
   return (
     <div className="App">
       <div className="posts">
@@ -16,36 +26,35 @@ function App() {
               <div key={i}>
                 {item.name}
                 <br></br>
-                <b>{item.type}</b>
                 <br></br>
-                <b>Details: {item.details}</b>
+                {item.type}
+                <br></br>
+                <br></br>
+                <FormControl label={'margin="none"'} sx={{ width: "65ch" }}>
+                  <OutlinedInput defaultValue={item.details} />
+                </FormControl>
+                <br></br>
                 <br></br>
                 Attributes:<br></br>
-                <table>
-                  <thead>
-                    <th>
-                      Key
-                    </th>
-                    <th>
-                      Value
-                    </th>
-                  </thead>
-                  {item.attributes.map((sub) => (
-                    <tr>
-                    <td>
-                      <tr>
-                      {sub.key}
-                      </tr>
-                    </td>
-                    <td>
-                      <tr>
-                      {sub.value}
-                      </tr>
-                    </td>
-                    </tr>
-                    
-                  ))}
-                </table>
+                <br></br>
+                <TableContainer component={Paper}>
+                  <Table sx={{ maxWidth: 560 }} aria-label="simple table">
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Key</TableCell>
+                        <TableCell>Value</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {item.attributes.map((sub) => (
+                        <TableRow>
+                          <TableCell>{sub.key}</TableCell>
+                          <TableCell>{sub.value}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
               </div>
             );
           })}
