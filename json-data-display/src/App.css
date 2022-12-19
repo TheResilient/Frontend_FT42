@@ -43,28 +43,28 @@
 }
 
 table {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 550px;
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
   border-collapse: collapse;
-  border-spacing: 5px;
-  border-radius: 5%;
-  /* margin-top: 100px; */
-  
-  text-align: center;
-  vertical-align: middle;
-  width: 50%;
-}
-
-th, td {
-  width: 25%;
-  text-align: center;
-  padding: 8px;
 }
 
 td{
   background-color: #b8f1fc;
 }
 
+
 th{
   background-color: #2198c4;
   color: white;
-  width:25%;
+  padding: 6px;
+}
+
+.ars{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

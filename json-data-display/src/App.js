@@ -1,27 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import data from "./data.json";
-import React, { useState } from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import FormControl, { useFormControl } from "@mui/material/FormControl";
+import React from "react";
+import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
-// import { makeStyles } from "tss-react/mui";
-
-// const useTableHeaderStyles = makeStyles({
-//   // .MuiTableHead-root
-//   root: {
-//     borderRadius: "10px",
-//   },
-// });
+import { Box } from "@mui/material";
 
 function App() {
-  // var [selects, setSelects] = useState();
-  // console.log(selects);
-  // const tableHeaderClasses = useTableHeaderStyles();
   return (
     <div className="App">
       <div className="posts">
@@ -34,18 +19,27 @@ function App() {
                 <pre />
                 {item.type}
                 <pre />
-                <FormControl label={'margin="none"'} sx={{ width: "65ch" }}>
+                {/* <FormControl label={'margin="none"'} sx={{ width: "65ch" }}>
                   <OutlinedInput defaultValue={item.details} />
-                </FormControl>
+                </FormControl> */}
+                <Box
+                  sx={{
+                    width: 300,
+                    border: "1px solid",
+                    borderRadius: "10px",
+                    padding: "2px",
+                  }}
+                >
+                  {item.details}
+                </Box>
                 <pre />
-                <b>Attributes</b>
+                <h4>Attributes</h4>
                 <pre />
-                <Table
+                {/* <Table
                   sx={{ maxWidth: "650px", borderRadius: "106px" }}
                   aria-label="simple table"
                 >
                   <TableHead>
-                    {/* <TableHead classes={tableHeaderClasses.root}> */}
                     <TableRow>
                       <TableCell>Key</TableCell>
                       <TableCell>Value</TableCell>
@@ -59,7 +53,21 @@ function App() {
                       </TableRow>
                     ))}
                   </TableBody>
-                </Table>
+                </Table> */}
+
+                <table>
+                  <tr>
+                    <th class="ars">Key</th>
+                    <th class="ars">Value</th>
+                  </tr>
+
+                  {item.attributes.map((sub) => (
+                    <tr>
+                      <td class="ars">{sub.key}</td>
+                      <td class="ars">{sub.value}</td>
+                    </tr>
+                  ))}
+                </table>
               </div>
             );
           })}
